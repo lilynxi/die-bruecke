@@ -1,0 +1,217 @@
+
+/*
+ Theme Name:   Wilson Child
+ Description:  Theme for Die Bruecke
+ Author:       Lisa Mueller
+ Template:     wilson
+ Version:      1.0
+ Text Domain:  wilson-child
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+
+@import 'variables';
+@import 'typography';
+
+
+body {
+  background: white;
+}
+
+.wrapper {
+  margin-left: 0;
+  min-height: 1000px;
+  max-width: 100%;
+}
+
+.boy {
+  @media(min-width: $medium){
+    background: url(img/boy.png) -20px bottom no-repeat;
+    background-size: 400px auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.girl{
+  @media(min-width: $medium){
+    background: url(img/girl.png) 950px bottom no-repeat;
+    background-size: 450px auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+
+
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.sidebar {
+  background: none;
+
+  @media(min-width: $medium){
+    margin-top: 40px;
+    width: 27%;
+  }
+}
+
+.content {
+  box-shadow: $box-shadow;
+
+  ul {
+    margin-left: 0;
+    list-style: square;
+  }
+
+  @media(min-width: $medium){
+    width: 73%;
+    max-width: 720px;
+  }
+}
+
+
+.blog-header {
+  padding: 0 10% !important;
+  
+  a {
+    display: block;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 160px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    box-shadow: $box-shadow;
+
+    @media(min-width: $medium){
+      max-width: none;
+    }
+  }
+}
+
+
+.post-inner {
+  padding-top: 10px;
+}
+
+// uber uns quote
+
+.wp-block-media-text__content {
+  padding-left: 0 !important;
+}
+
+
+// desktop menu
+
+.desktop-menu {
+  display: none;
+  padding-top: 40px;
+
+  @media(min-width: $medium){
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 8%;
+    margin-right: 8%;
+    border-bottom: thin solid $grey-line;
+
+    li {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 14px;
+      margin-top: 0;
+
+      @media(min-width: 840px){
+        margin-right: 18px;
+      }
+
+      @media(min-width: 960px){
+        margin-right: 28px;
+      }
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        padding-bottom: 20px;
+        border-bottom: 4px solid $white;
+        display: block;
+        color: $grey;
+
+        &:hover,
+        &[aria-current="page"] {
+          border-color: $blue;
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+// mobile menu
+
+.nav-toggle {
+  background: $white;
+
+  p {
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  &.active .bar,
+  .bar {
+    background-color: $grey;
+  }
+
+  .show,
+  .hide {
+    color: $grey;
+    cursor: pointer;
+  }
+}
+
+.mobile-menu {
+  border-top: thin solid $grey-light;
+  li {
+    background-color: $white;
+    border-top: none;
+
+    &.current-menu-item a {
+      color: $blue;
+      &:hover {
+        color: $white;
+      }
+    }
+
+    a {
+      color: $grey;
+      text-align: center;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 16px 8%;
+
+      &:hover {
+        background-color: $blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
