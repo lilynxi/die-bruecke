@@ -60,10 +60,12 @@ a {
 
 .sidebar {
   background: none;
+  padding-top: 20px;
 
   @media(min-width: $medium){
     margin-top: 40px;
     width: 27%;
+    padding-top: 0;
   }
 }
 
